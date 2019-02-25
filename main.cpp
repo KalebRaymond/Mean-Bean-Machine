@@ -11,10 +11,11 @@ int main()
     pp.tail.posX = 1;
     pp.tail.posY = 4;
 
-    pp.rotate_clock();
+    //pp.rotate_clock();
+    pp.translate(0, 1);
     std::cout << pp.tail.posX << ", " << pp.tail.posY << "\n";
 
-    test.board[pp.head.posX][pp.head.posY] = pp.head.color;
-    test.board[pp.tail.posX][pp.tail.posY] = pp.tail.color;
+    test.board[pp.head.posY][pp.head.posX] = pp.head.color;
+    test.board[pp.tail.posY][pp.tail.posX] = pp.tail.color;
     test.printBoard();
 }
