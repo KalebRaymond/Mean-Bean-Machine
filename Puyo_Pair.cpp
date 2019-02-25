@@ -10,12 +10,12 @@ Puyo_Pair::Puyo_Pair(char hColor, char tColor)
 
 void Puyo_Pair::rotate_clock()
 {
-    int sin = 1; //Sin(pi/2)
     this->tail.posX -= this->head.posX;
     this->tail.posY -= this->head.posY;
 
-    this->tail.posX = -1 * this->tail.posY * sin;
-    this->tail.posY = this->tail.posX * sin;
+    int oldX = this->tail.posX;
+    this->tail.posX = this->tail.posY;
+    this->tail.posY = -1 * oldX;
 
     this->tail.posX += this->head.posX;
     this->tail.posY += this->head.posY;
@@ -23,12 +23,12 @@ void Puyo_Pair::rotate_clock()
 
 void Puyo_Pair::rotate_ccw()
 {
-    int sin = -1; //Sin(-pi/2)
     this->tail.posX -= this->head.posX;
     this->tail.posY -= this->head.posY;
 
-    this->tail.posX = -1 * this->tail.posY * sin;
-    this->tail.posY = this->tail.posX * sin;
+    int oldX = this->tail.posX;
+    this->tail.posX = -1 * this->tail.posY;
+    this->tail.posY = oldX;
 
     this->tail.posX += this->head.posX;
     this->tail.posY += this->head.posY;
