@@ -8,6 +8,6 @@ class Puyo_Pair
         Puyo tail;
         void rotate_clock();
         void rotate_ccw();
-        void translate();
+        void translate(int, int);
         Puyo_Pair(char hColor, char tColor);
 };
