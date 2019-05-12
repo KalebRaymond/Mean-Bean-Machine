@@ -2,10 +2,14 @@
 #include <cmath>
 #define PI 3.14159265
 
-Puyo_Pair::Puyo_Pair(char hColor, char tColor)
+Puyo_Pair::Puyo_Pair(double hR, double hG, double hB, double tR, double tG, double tB)
 {
-    this->head.color = hColor;
-    this->tail.color = tColor;
+    this->head.r = hR;
+    this->head.g = hG;
+    this->head.b = hB;
+    this->tail.r = tR;
+    this->tail.g = tG;
+    this->tail.b = tB;
 }
 
 void Puyo_Pair::rotate_clock()

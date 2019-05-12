@@ -9,5 +9,5 @@ class Puyo_Pair
         void rotate_clock();
         void rotate_ccw();
         void translate(int, int);
-        Puyo_Pair(char hColor, char tColor);
+        Puyo_Pair(double, double, double, double, double, double );
 };

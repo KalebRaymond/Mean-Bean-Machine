@@ -1,8 +1,8 @@
 class Board
 {
     public:
-        char board[12][6];
+        double board[12][6][3];
         Board();
-        void printBoard();
+        //void printBoard();
     private:
 };

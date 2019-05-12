@@ -2,9 +2,11 @@
 class Puyo
 {
     public:
-        char color;
+        double r;
+        double g;
+        double b;
         int posX;
         int posY;
         Puyo();
-        Puyo(char );
+        Puyo(double, double, double );
 };
