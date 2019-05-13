@@ -1,3 +1,3 @@
 # Mean-Bean-Machine
 
-Basic Puyo Puyo reconstruction to brush up on C++.
+Basic Puyo Puyo reconstruction, just to brush up on C++.
