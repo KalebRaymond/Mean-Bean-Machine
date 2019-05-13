@@ -44,19 +44,17 @@ int main()
     pp.translate(0, 1);
     std::cout << pp.tail.posX << ", " << pp.tail.posY << "\n";
 
-    test.board[pp.head.posY][pp.head.posX][0] = pp.head.r;
-    test.board[pp.head.posY][pp.head.posX][1] = pp.head.g;
-    test.board[pp.head.posY][pp.head.posX][2] = pp.head.b;
-    test.board[pp.tail.posY][pp.tail.posX][0] = pp.tail.r;
-    test.board[pp.tail.posY][pp.tail.posX][1] = pp.tail.g;
-    test.board[pp.tail.posY][pp.tail.posX][2] = pp.tail.b;test.board[pp.head.posY][pp.head.posX][0] = pp.head.r;
-    test.board[pp.head.posY][pp.head.posX][1] = pp.head.g;
-    test.board[pp.head.posY][pp.head.posX][2] = pp.head.b;
+    test.setColor(pp.head.posX, pp.head.posY, pp.head.r, pp.head.g, pp.head.b);
+    test.setColor(pp.tail.posX, pp.tail.posY, pp.tail.r, pp.tail.g, pp.tail.b);
 
     while(!slShouldClose() && !slGetKey(SL_KEY_ESCAPE))
     {
+        pp.translate(0, 1);
+        test.setColor(pp.head.posX, pp.head.posY, pp.head.r, pp.head.g, pp.head.b);
+        test.setColor(pp.tail.posX, pp.tail.posY, pp.tail.r, pp.tail.g, pp.tail.b);
         drawBoard(test);
         slRender();
+
     }
     slClose();
 }
